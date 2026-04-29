@@ -3,7 +3,7 @@
 	<ul class="socials">
 		{%- for site, url in socials.sites -%}
 		<li>
-			<a href="{{ site.url }}" aria-label="Follow Website on {{ site.name }}">
+			<a href="{{ meta.url }}" aria-label="Follow Website on {{ meta.name }}">
 				{% set iconPath = "../../images/meta/" + site.name + ".svg" %}
 				{% include iconPath %}
 			</a>

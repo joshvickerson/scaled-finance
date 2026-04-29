@@ -3,7 +3,7 @@
 {% endif %}
 
 <!DOCTYPE HTML>
-<html lang="{{ site.lang }}" data-theme="{{themeColor}}">
+<html lang="{{ meta.lang }}" data-theme="{{themeColor}}">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 	{% block customMeta %}{% endblock %} {# allow pages to specify custom meta info #}
 	
 	{# UNCOMMENT TO ENABLE RSS (add feed.xml) #}
-	<!-- <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" /> -->
+	<!-- <link rel="alternate" type="application/rss+xml" href="{{ meta.url }}/feed.xml" /> -->
 	{# load font stylesheet onload. This can result in FOUT but helps speed initial render #}
 	<link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
 	

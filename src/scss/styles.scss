@@ -42,19 +42,29 @@
 	--size-scale-tiny: 0.694rem;
 
 	// colors
+	--blue: rgb(01, 19, 200);
+	--pink: rgb(206, 15, 105);
+	--warm-gray: rgb(110, 98, 89);
+	--white: rgb(255, 255, 255);
+	--black: rgb(0,0,0);
+	--light-green: rgb(113, 204, 152);
+	--pale-blue: rgb(119, 197, 213);
+	--light-warm-gray: rgb(215, 210, 203);
+	--dark-green: rgb(0, 78, 66);
 	
 
 	// semantic variables
-	--background-1: #fefefe;
-	--background-2: #111;
-	--background-3: #a9a9a9;
-	--text-1: #111;
-	--text-2: #fefefe;
-	--brand-color: rebeccapurple;
-	--link-color: darkblue;
-	--link-hover-color: darkred;
+	--background-1: var(--white);
+	--background-2: var(--pink);
+	--background-3: var(--light-warm-gray);
+	--text-1: var(--black);
+	--text-2: var(--white);
+	--brand-color: var(--blue);
+	--link-color: var(--blue);
+	--link-hover-color: var(--dark-green);
 	--focus-outline-color: var(--brand-color);
-	--body-font: sans-serif;
+	--body-font: 'Poppins', Arial, sans-serif;
+	--header-font: 'Poppins', Arial, sans-serif;
 
 	// sizes
 	--h1-size: var(--size-scale-700);
@@ -75,6 +85,10 @@ body {
 	font-family: var(--body-font);
 	font-weight: normal;
 	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--header-font);
 }
 
 h1 {
