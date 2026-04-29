@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="hero">
+	<div class="hero__content wrapper">
+	{%- if hero.image -%}
+	<img src="/images/{{hero.image}}" alt="{{hero.imageAlt}}" />
+	{%- endif -%}
+	<h2 class="header-text">{{ hero.headline }}</h2>
+	<p>{{ hero.text | safe }}</p>
+	<div class="hero__ctas">
+		<a class="button" href="{{hero.cta.url}}">{{hero.cta.text}}</a>
+	</div>
+	</div>
+</section>
+<div class="page-content wrapper">
+	{{ content | safe }}
+</div>
+{% endblock %}

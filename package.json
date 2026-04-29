@@ -1,0 +1,27 @@
+{
+	"name": "scaled-finance",
+	"version": "0.0.1",
+	"description": "Source code for the Scaled Finance website.",
+	"main": "index.js",
+	"scripts": {
+		"start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+		"production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+	},
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"@11ty/eleventy": "^3.1.5",
+		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy-navigation": "^1.0.5",
+		"@aptuitiv/gulp-clean-css": "^4.4.3",
+		"gulp": "^5.0.1",
+		"gulp-sass": "^6.0.0",
+		"html-minifier-terser": "^7.2.0",
+		"netlify-plugin-html-validate": "^1.1.1",
+		"sass": "^1.99.0"
+	},
+	"devDependencies": {
+		"concurrently": "^9.2.1"
+	}
+}

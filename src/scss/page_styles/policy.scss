@@ -1,0 +1,28 @@
+/**
+ * Policy page styles
+ */
+main {
+	> .wrapper {
+		padding-block: 2rem 4rem;	
+	}
+	
+	h1, h2, h3, h4 {
+		margin-block: 1em 0.375em;
+	}
+	
+	h1, h2 {
+		max-width: 25ch;
+		text-wrap: balance;
+	}
+	
+	h3, h4 {
+		max-width: 40ch;
+	}
+	
+	p {
+		line-height: 1.7;
+		margin-block: 1em;
+		margin-block: 1lh;
+		max-width: 75ch;
+	}
+}

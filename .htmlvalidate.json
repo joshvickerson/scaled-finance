@@ -1,0 +1,12 @@
+{
+	"extends": ["html-validate:recommended"],
+	"rules": {
+		"doctype-style": 0,
+		"no-dup-class": 0,
+		"element-permitted-content": 1,
+		"attribute-boolean-style": 0,
+		"attribute-empty-style": 1,
+		"no-trailing-whitespace": 0,
+		"no-raw-characters": 0
+	}
+}

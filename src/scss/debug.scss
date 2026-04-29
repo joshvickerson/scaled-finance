@@ -1,0 +1,8 @@
+// styles that only get loaded when not in production
+// useful for highlighting markup issues, accesibiltiy violations, etc.
+form {
+	label:not([for]) {
+		outline: #a00 solid 3px;
+		outline-offset: 2px;
+	}
+}

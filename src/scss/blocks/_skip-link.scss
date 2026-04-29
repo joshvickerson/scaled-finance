@@ -1,0 +1,15 @@
+@use '../utilities/visually-hidden.scss';
+
+.skip-link {
+	background-color: var(--dust) !important;
+	left: 1.25rem;
+	outline-offset: 3px;
+	outline: 2px solid var(--brand);
+	position: fixed;
+	top: 1rem;
+	z-index: 9999;
+
+	&:not(:focus) {
+		@extend .visually-hidden;
+	}
+}

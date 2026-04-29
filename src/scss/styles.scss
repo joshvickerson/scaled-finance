@@ -1,0 +1,137 @@
+@use "sass:meta";
+@use "sass:map";
+@use "_vars";
+@use "_reset";
+
+// Import utilities
+@use "utilities/backgrounds";
+@use "utilities/borders";
+@use "utilities/colors";
+@use "utilities/flow";
+@use "utilities/site-wrap";
+@use "utilities/typography";
+@use "utilities/visually-hidden";
+@use "utilities/wrapper";
+
+// Import blocks
+@use "blocks/buttons";
+@use "blocks/forms";
+@use "blocks/footer";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/nav";
+@use "blocks/skip-link";
+
+// basic layout definitions
+// TODO: move these to their own file when better defined
+.simple-page-layout {
+	min-height: 70lvh;
+}
+
+// define variables with their defaults on the root element
+:root {
+	// major third scale
+	--size-scale-major: 3.815rem;
+	--size-scale-900: 3.052rem;
+	--size-scale-800: 2.441rem;
+	--size-scale-700: 1.953rem;
+	--size-scale-600: 1.563rem;
+	--size-scale-500: 1.25rem;
+	--size-scale-400: 1rem;
+	--size-scale-small: 0.833rem;
+	--size-scale-tiny: 0.694rem;
+
+	// colors
+	
+
+	// semantic variables
+	--background-1: #fefefe;
+	--background-2: #111;
+	--background-3: #a9a9a9;
+	--text-1: #111;
+	--text-2: #fefefe;
+	--brand-color: rebeccapurple;
+	--link-color: darkblue;
+	--link-hover-color: darkred;
+	--focus-outline-color: var(--brand-color);
+	--body-font: sans-serif;
+
+	// sizes
+	--h1-size: var(--size-scale-700);
+	--h2-size: var(--size-scale-600);
+	--h3-size: var(--size-scale-500);
+	--h4-size: var(--size-scale-400);
+	--base-text-size: var(--size-scale-400);
+
+	--flow-space: calc(var(--size-scale-400) * 2);
+}
+
+html {
+	background-color: var(--background-1);
+}
+
+body {
+	color: var(--text-1);
+	font-family: var(--body-font);
+	font-weight: normal;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: var(--h1-size);
+}
+
+h2 {
+	font-size: var(--h2-size);
+}
+
+h3 {
+	font-size: var(--h3-size);
+}
+
+h4 {
+	font-size: var(--h4-size);
+}
+
+p {
+	font-size: var(--size-scale-400);
+	line-height: 1.5;
+}
+
+small {
+	font-size: var(--size-scale-small);
+}
+
+a {
+	color: var(--link-color);
+	
+	&:hover {
+		color: var(--link-hover-color);
+		text-decoration-style: double;
+	}
+}
+
+a:not([class]) {
+	&:focus-visible {
+		outline: 2px solid var(--focus-outline-color, #000);
+		outline-offset: 2px;
+	}
+}
+
+@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
+	:root {
+		--h1-size: var(--size-scale-800);
+		--h2-size: var(--size-scale-700);
+		--h3-size: var(--size-scale-600);
+		--h4-size: var(--size-scale-500);
+	}
+}
+
+@media screen and (min-width: map.get(vars.$breakpoints, "xl")) {
+	:root {
+		--h1-size: var(--size-scale-900);
+		--h2-size: var(--size-scale-800);
+		--h3-size: var(--size-scale-700);
+		--h4-size: var(--size-scale-600);
+	}
+}

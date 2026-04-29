@@ -1,0 +1,40 @@
+.button {
+	align-items: center;
+	background: var(--brand);
+	border-radius: 8px;
+	border: 0;
+	color: var(--brand-15);
+	display: flex;
+	font-weight: 900;
+	justify-content: center;
+	letter-spacing: 0.0125em;
+	line-height: 1;
+	padding: 1rem 1.5rem;
+	position: relative;
+	text-decoration: none;
+	text-shadow: none; // don't inherit text shadow from parents
+	text-transform: uppercase;
+	transition: background .125s ease-in-out;
+	width: fit-content;
+
+	&:hover {
+		background: var(--brand-6);
+		color: var(--brand-16);
+		cursor: pointer;
+	}
+	
+	&:focus-visible {
+		background: var(--brand-6);
+		outline: 2px solid var(--brand-4);
+		outline-offset: 3px;
+	}
+}
+
+ul.button-group,
+.button-group {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: var(--flow-space, 0);
+}

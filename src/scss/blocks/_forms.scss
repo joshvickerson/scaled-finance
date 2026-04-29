@@ -1,0 +1,38 @@
+@use "utilities/visually-hidden";
+
+form {
+	accent-color: var(--brand-color);
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	
+	input,
+	select,
+	textarea {
+		margin-bottom: var(--flow-space, 2rem);
+		width: 100%;
+	}
+	
+	label {
+		color: var(--brand-color);
+		display: inline-block;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.125rem;
+		max-width: fit-content;
+		text-transform: uppercase;
+	}
+	
+	// two-column fieldset (e.g. first and last name)
+	fieldset[data-columns="2"] {
+		border: 0;
+		display: grid;
+		gap: 0 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		padding: 0;
+	
+		legend {
+			@extend .visually-hidden;
+		}
+	}
+}

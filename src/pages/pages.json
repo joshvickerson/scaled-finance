@@ -1,0 +1,4 @@
+{
+	"layout": "layouts/simple-page.html",
+	"permalink": "/{{ page.filePathStem | replace: '/pages', '' }}/"
+}

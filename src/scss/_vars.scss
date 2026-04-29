@@ -1,0 +1,10 @@
+@use "sass:map";
+// start with sass vars
+$breakpoints: (
+	'': '', // an empty breakpoint for "all" used to generate non-sized utilities
+	'sm': 36rem,
+	'md': 48rem,
+	'lg': 64rem,
+	'xl': 85.375rem,
+	'xxl': 112.5rem
+);

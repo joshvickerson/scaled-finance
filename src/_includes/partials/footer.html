@@ -1,0 +1,15 @@
+<footer class="site-footer">
+	<div class="wrapper">
+	<ul class="socials">
+		{%- for site, url in socials.sites -%}
+		<li>
+			<a href="{{ site.url }}" aria-label="Follow Website on {{ site.name }}">
+				{% set iconPath = "../../images/meta/" + site.name + ".svg" %}
+				{% include iconPath %}
+			</a>
+		</li>
+		{%- endfor -%}
+	</ul>
+		<p class="credits">&copy; 2026. <a href="https://softclay.software/">Web design by Soft Clay Software</a>.</p>
+	</div>
+</footer>

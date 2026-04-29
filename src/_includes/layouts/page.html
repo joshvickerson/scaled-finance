@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block customMeta %}
+<style>
+	:root {
+	--page-bg-image: url("{{ pageBackgroundImage }}");
+	--page-bg-image-mobile: url("{{ pageBackgroundImageMobile }}");
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+{%- if hero is defined -%}
+<div class="page-hero">
+	<div class="wrapper">
+		<h1>{{ hero.header }}</h1>
+		<p>{{ hero.subheader }}</p>
+	</div>
+	{%- if hero.shade -%}
+	<div class="shade"></div>
+	{%- endif -%}
+</div>
+{%- endif -%}
+<div class="page-wrapper" data-page="{{page.fileSlug}}">
+	{{ content | safe }}
+</div>
+{% endblock %}

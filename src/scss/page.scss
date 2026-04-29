@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "utilities/typography";
+@use "_vars";
+
+.page-wrapper {
+	background-image: var(--page-bg-image-mobile);
+	background-position: var(--page-bg-position, center);
+	background-size: var(--page-bg-size, cover);
+	min-height: calc(70lvh - 90px);
+	padding-block: var(--flow-space, 1rem);
+	position: relative;
+
+	&:has(.page-background-shade) {
+		> :not(.page-background-shade) {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	.section__content {
+		> * {
+			background-color: var(--page-content-bg-color, var(--background-1));
+			padding-block-start: var(--flow-space);
+			padding-inline: var(--flow-space);
+
+			&:last-child {
+				padding-block-end: var(--flow-space);
+			}
+		}
+
+		p {
+			font-size: var(--size-scale-500);
+			line-height: 1.5;
+		}
+	}
+
+	.section__header {
+		width: fit-content;
+	}
+
+	@media screen and (min-width: map.get(vars.$breakpoints, "lg")) {
+		background-image: var(--page-bg-image);
+	}
+}
+
+.page-tagline {
+	font-size: var(--h2-size);
+	padding-block: var(--flow-space, 1rem);
+	text-wrap: balance;
+}
+
+.page-background-shade {
+	background-color: var(--page-shade-bg-color, #000);
+	position: absolute;
+	inset: 0;
+	opacity: var(--page-shade-opacity, 0.375);
+	z-index: 1;
+}
