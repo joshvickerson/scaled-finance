@@ -13,7 +13,53 @@
 	</div>
 	</div>
 </section>
-<div class="page-content wrapper">
+{% include "partials/logo-strip.html" %}
+<section id="questions">
+	<div class="wrapper">
+		<h2 class="text-align-center">Like other tech employees, do you wonder:</h2>
+		<div class="grid">
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">401K</p>
+				<p class="flex-column__text">How much to contribute to 401(k)?</p>
+			</div>
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">ESPP</p>
+				<p class="flex-column__text">Whether to participate in the ESPP?</p>
+			</div>
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">RSUs</p>
+				<p class="flex-column__text">What to do with Restricted Stock Units?</p>
+			</div>
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">HSA</p>
+				<p class="flex-column__text">Whether to fund an HSA?</p>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="page-content wrapper flow">
 	{{ content | safe }}
 </div>
+<section id="planning">
+	<div class="wrapper">
+		<h2 class="text-align-center">Here's how the financial planning process works:</h2>
+		<div class="grid">
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">1. Free Consultation</p>
+				<p class="flex-column__text">How much to contribute to 401(k)?</p>
+			</div>
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">2. Draft a roadmap</p>
+				<p class="flex-column__text">Whether to participate in the ESPP?</p>
+			</div>
+			<div class="flex-column | text-align-center">
+				<p class="flex-column__label">3. Develop your plan</p>
+				<p class="flex-column__text">What to do with Restricted Stock Units?</p>
+			</div>
+		</div>
+		<div class="button-group">
+			<a class="button" href="/howitworks/">Learn More</a>
+		</div>
+	</div>
+</section>
 {% endblock %}

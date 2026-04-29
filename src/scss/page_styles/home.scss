@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "../vars";
+
+section:not(.hero) {
+	padding-block: calc(var(--flow-space) * 2);
+}
+
+#questions {
+	background-color: var(--background-2);
+	color: var(--white);
+	
+	.grid {
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		margin-block: var(--flow-space);
+	}
+	
+	.flex-column {
+		&__label {
+			color: var(--light-green);
+			font-size: var(--h2-size);
+			font-weight: 300;
+		}
+		
+		&__text {
+			font-size: var(--h3-size);
+		}
+	}
+}
+
+#planning {
+	background-color: var(--background-3);
+	color: var(--text-2);
+	
+	.grid {
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		margin-block: var(--flow-space);
+	}
+	
+	.flex-column {
+		&__label {
+			font-size: var(--h3-size);
+			font-weight: 300;
+		}
+	}
+}

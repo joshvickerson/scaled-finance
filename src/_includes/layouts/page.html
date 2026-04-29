@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+
 {%- if hero is defined -%}
 <div class="page-hero">
 	<div class="wrapper">
@@ -21,7 +22,9 @@
 	{%- endif -%}
 </div>
 {%- endif -%}
-<div class="page-wrapper" data-page="{{page.fileSlug}}">
+
+<div class="page-wrapper">
 	{{ content | safe }}
 </div>
+
 {% endblock %}

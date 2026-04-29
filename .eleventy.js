@@ -34,7 +34,6 @@ export default (config) => {
 	config.addPlugin(eleventyImageTransformPlugin, {
 		formats: ["avif", "webp", "jpg"],
 		filenameFormat: function (id, src, width, format, options) {
-			console.log('OPTIMIZING IMAGE FROM SRC: ' + src);
 			// Preserve file names for SEO purposes
 			const extension = path.extname(src);
 			const name = path.basename(src, extension);

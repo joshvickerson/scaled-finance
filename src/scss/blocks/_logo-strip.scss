@@ -1,0 +1,23 @@
+.logo-strip-container {
+	
+	p:first-child {
+		font-size: var(--h3-size);
+		text-align: center;
+	}
+	
+	.logo-strip {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		
+		a {
+			flex: 1 1 12%;
+		}
+		
+		img {
+			margin: auto;
+			max-height: 72px;
+		}
+	}
+}

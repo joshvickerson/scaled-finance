@@ -8,6 +8,7 @@
 @use "utilities/borders";
 @use "utilities/colors";
 @use "utilities/flow";
+@use "utilities/layout";
 @use "utilities/site-wrap";
 @use "utilities/typography";
 @use "utilities/visually-hidden";
@@ -19,6 +20,7 @@
 @use "blocks/footer";
 @use "blocks/header";
 @use "blocks/hero";
+@use "blocks/logo-strip";
 @use "blocks/nav";
 @use "blocks/skip-link";
 
@@ -43,7 +45,9 @@
 
 	// colors
 	--blue: rgb(01, 19, 200);
+	--blue__dark: rgb(1,14,149);
 	--pink: rgb(206, 15, 105);
+	--pink__dark: rgb(158,12,81);
 	--warm-gray: rgb(110, 98, 89);
 	--white: rgb(255, 255, 255);
 	--black: rgb(0,0,0);
@@ -56,12 +60,12 @@
 	// semantic variables
 	--background-1: var(--white);
 	--background-2: var(--pink);
-	--background-3: var(--light-warm-gray);
+	--background-3: var(--warm-gray);
 	--text-1: var(--warm-gray);
 	--text-2: var(--white);
 	--brand-color: var(--blue);
-	--link-color: var(--blue);
-	--link-hover-color: var(--dark-green);
+	--link-color: var(--pink);
+	--link-hover-color: var(--pink__dark);
 	--focus-outline-color: var(--brand-color);
 	--body-font: 'Poppins', Arial, sans-serif;
 	--header-font: 'Poppins', Arial, sans-serif;
@@ -97,6 +101,7 @@ h1 {
 
 h2 {
 	font-size: var(--h2-size);
+	font-weight: 500;
 }
 
 h3 {
@@ -121,7 +126,7 @@ a {
 	
 	&:hover {
 		color: var(--link-hover-color);
-		text-decoration-style: double;
+		text-decoration-style: wavy;
 	}
 }
 

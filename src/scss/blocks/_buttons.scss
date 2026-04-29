@@ -1,31 +1,32 @@
+@use "sass:map";
+@use "vars";
+
 .button {
 	align-items: center;
-	background: var(--brand);
+	background-color: var(--pink);
 	border-radius: 8px;
 	border: 0;
-	color: var(--brand-15);
+	color: var(--white);
 	display: flex;
-	font-weight: 900;
 	justify-content: center;
-	letter-spacing: 0.0125em;
 	line-height: 1;
 	padding: 1rem 1.5rem;
 	position: relative;
 	text-decoration: none;
 	text-shadow: none; // don't inherit text shadow from parents
-	text-transform: uppercase;
-	transition: background .125s ease-in-out;
+	transition: background-color .125s ease-in-out;
 	width: fit-content;
 
 	&:hover {
-		background: var(--brand-6);
-		color: var(--brand-16);
+		background-color: var(--pink__dark);
+		color: var(--white);
 		cursor: pointer;
 	}
 	
 	&:focus-visible {
-		background: var(--brand-6);
-		outline: 2px solid var(--brand-4);
+		background: var(--pink__dark);
+		color: var(--white);
+		outline: 2px solid var(--pink__dark);
 		outline-offset: 3px;
 	}
 }
@@ -37,4 +38,11 @@ ul.button-group,
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: var(--flow-space, 0);
+}
+
+
+@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
+	.button {
+		font-size: var(--size-scale-500);
+	}
 }

@@ -3,8 +3,7 @@
 
 .site-header {
 	background-color: var(--background-1);
-	border-bottom: 2px solid var(--brand-color);
-	padding-block: 1rem;
+	padding-block: 1.5rem;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
@@ -12,6 +11,8 @@
 	a:not([class]),
 	&__brand {
 		color: var(--text-1);
+		font-size: var(--size-scale-400);
+		text-transform: uppercase;
 		
 		&:focus,
 		&:focus-visible {
@@ -34,7 +35,7 @@
 		flex-shrink: 0;
 
 		> * {
-			max-width: 64px;
+			max-width: 320px;
 		}
 	}
 
