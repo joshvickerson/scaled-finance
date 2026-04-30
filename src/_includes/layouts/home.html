@@ -6,8 +6,12 @@
 	{%- if hero.image -%}
 	<img src="/images/{{hero.image}}" alt="{{hero.imageAlt}}" />
 	{%- endif -%}
+	{%- if hero.headline -%}
 	<h2 class="header-text">{{ hero.headline }}</h2>
+	{%- endif -%}
+	{%- if hero.text -%}
 	<p>{{ hero.text | safe }}</p>
+	{%- endif -%]}
 	<div class="hero__ctas">
 		<a class="button" href="{{hero.cta.url}}">{{hero.cta.text}}</a>
 	</div>
