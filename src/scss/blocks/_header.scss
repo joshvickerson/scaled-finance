@@ -35,7 +35,7 @@
 		> ul {
 			align-items: center;
 			display: flex;
-			gap: 0.5rem;
+			gap: 0.625rem;
 			list-style-type: none;
 			padding-inline: 0;
 			
@@ -51,7 +51,7 @@
 			display: block;
 			font-size: var(--size-scale-400);
 			padding-block: 0.125lh;
-			padding-inline: 1ch;
+			padding-inline: 0.5ch;
 			text-decoration: none;
 			text-transform: uppercase;
 			
@@ -68,6 +68,19 @@
 				color: var(--blue__dark);
 				outline-offset: -2px;
 				outline-color: var(--brand-color);
+			}
+			
+			&[aria-current="page"] {
+				&::after {
+					background-color: var(--pink);
+					bottom: -1px;
+					content: ' ';
+					display: block;
+					height: 2px;
+					left: 0;
+					position: absolute;
+					width: 100%;
+				}
 			}
 		}
 	}

@@ -1,13 +1,13 @@
 {% set navPages = collections.all | eleventyNavigation %}
+
 <header class="site-header">
 	<a class="skip-link | button" href="#main-content">Skip to content</a>
 	<div class="wrapper">
 		<a href="/" aria-label="{{ meta.name }} - home" class="site-header__brand">
 			<img src="/images/meta/logo.png" alt="" height="281" width="1000">
 		</a>
-		<nav class="nav | site-header__nav" aria-label="Primary">
-			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-			{#<ul class="nav__list">
+		<nav class="site-header__nav" aria-label="Primary">
+			<ul>
 				{%- for item in navPages -%}
 				<li>
 				{%- if item.children.length -%}
@@ -28,7 +28,7 @@
 				{%- endif -%}
 				</li>
 				{%- endfor -%}
-			</ul>#}
+			</ul>
 		</nav>
 	</div>
 </header>
