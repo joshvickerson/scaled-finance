@@ -1,9 +1,9 @@
 ---
-title: "About Scaled Finance"
-description: "About Scaled Finance"
+title: "How It Works"
+description: "How it works..."
 
 eleventyNavigation:
-  key: "About"
+  key: "How It Works"
 ---
 
 ## Kevin Estes, CFP®, CCFC, MBA

@@ -7,19 +7,6 @@
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	
-	a:not([class]),
-	&__brand {
-		color: var(--text-1);
-		font-size: var(--size-scale-400);
-		text-transform: uppercase;
-		
-		&:focus,
-		&:focus-visible {
-			outline: 3px solid var(--brand-color);
-			outline-offset: 2px;
-		}
-	}
 
 	.wrapper {
 		align-items: center;
@@ -43,6 +30,46 @@
 		margin-inline: auto;
 		padding-block: 0 0.5rem;
 		padding-inline: 0;
+		
+		// parent navigation container
+		> ul {
+			align-items: center;
+			display: flex;
+			gap: 0.5rem;
+			list-style-type: none;
+			padding-inline: 0;
+			
+			// parent level link containers
+			> li {
+				position: relative;
+			}
+		}
+		
+		// styles for all links in nav, regardless of nesting depth
+		a {
+			color: var(--text-1);
+			display: block;
+			font-size: var(--size-scale-400);
+			padding-block: 0.125lh;
+			padding-inline: 1ch;
+			text-decoration: none;
+			text-transform: uppercase;
+			
+			&:hover {
+				cursor: pointer;
+			}
+			
+			&:visited {
+				color: currentColor;
+			}
+			
+			&:focus-visible {
+				background-color: var(--pale-blue-transparent);
+				color: var(--blue__dark);
+				outline-offset: -2px;
+				outline-color: var(--brand-color);
+			}
+		}
 	}
 
 	.nav__list {

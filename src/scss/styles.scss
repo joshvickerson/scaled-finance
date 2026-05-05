@@ -21,7 +21,6 @@
 @use "blocks/header";
 @use "blocks/hero";
 @use "blocks/logo-strip";
-@use "blocks/nav";
 @use "blocks/skip-link";
 
 // basic layout definitions
@@ -53,6 +52,7 @@
 	--black: rgb(0,0,0);
 	--light-green: rgb(113, 204, 152);
 	--pale-blue: rgb(119, 197, 213);
+	--pale-blue-transparent: rgb(119, 197, 213, 0.3);
 	--light-warm-gray: rgb(215, 210, 203);
 	--dark-green: rgb(0, 78, 66);
 	
@@ -130,7 +130,7 @@ a {
 	}
 }
 
-a:not([class]) {
+a:is(:not([class])) {
 	&:focus-visible {
 		outline: 2px solid var(--focus-outline-color, #000);
 		outline-offset: 2px;
