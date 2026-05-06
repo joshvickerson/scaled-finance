@@ -64,7 +64,7 @@
 				width: 100%;
 				
 				&:hover {
-					background-color: var(--light-warm-gray);
+					background-color: var(  --warm-gray__light);
 					color: var(--black);
 				}
 			}
@@ -91,6 +91,7 @@
 			font-size: var(--size-scale-400);
 			padding-block: 0.125lh;
 			padding-inline: 0.5ch;
+			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
 			
@@ -124,8 +125,9 @@
 		}
 	}
 
-	.nav__list {
-		justify-content: center;
+	// CTA button(s) in the header
+	.button {
+		text-align: center;	
 	}
 }
 

@@ -15,6 +15,7 @@
 @use "utilities/wrapper";
 
 // Import blocks
+@use "blocks/accordion";
 @use "blocks/buttons";
 @use "blocks/forms";
 @use "blocks/footer";
@@ -48,13 +49,15 @@
 	--blue__dark: rgb(1,14,149);
 	--pink: rgb(206, 15, 105);
 	--pink__dark: rgb(158,12,81);
+	--pink__light: rgb(242,81,157);
+  --warm-gray__light: rgb(215, 210, 203);
 	--warm-gray: rgb(110, 98, 89);
+  --warm-gray__dark: rgb(88, 82, 77);
 	--white: rgb(255, 255, 255);
 	--black: rgb(0,0,0);
 	--light-green: rgb(113, 204, 152);
 	--pale-blue: rgb(119, 197, 213);
 	--pale-blue-transparent: rgb(119, 197, 213, 0.3);
-	--light-warm-gray: rgb(215, 210, 203);
 	--dark-green: rgb(0, 78, 66);
 	
 
@@ -62,8 +65,10 @@
 	--background-1: var(--white);
 	--background-2: var(--pink);
 	--background-3: var(--warm-gray);
+	--background-4: var(--warm-gray__light);
 	--text-1: var(--warm-gray);
 	--text-2: var(--white);
+	--text-3: var(--warm-gray__dark);
 	--brand-color: var(--blue);
 	--link-color: var(--pink);
 	--link-hover-color: var(--pink__dark);

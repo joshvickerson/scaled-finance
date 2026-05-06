@@ -70,7 +70,7 @@
 	</div>
 </section>
 <section id="pay">
-	<div class="wrapper">
+	<div class="wrapper flow">
 		<h2 class="text-align-center">Only pay for what <span class="bright-text">you</span> need!</h2>
 		<p>You're never:</p>
 		<ul>
@@ -102,9 +102,9 @@
 	<div class="wrapper">
 		<h2>What do these mean for you?</h2>
 		{% if valuesAccordion %}
-		<div id="values-accordion" class="accordion-container">
+		<div id="values-accordion" class="accordion">
 			{% for v in valuesAccordion %}
-			<details class="faq-item flow" name="{{ section.title | slugify }}">
+			<details class="accordion-item flow" name="values">
 				<summary>{{ v.label }}</summary>
 				{{ v.body | safe }}
 			</details>

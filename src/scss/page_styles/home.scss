@@ -46,6 +46,34 @@ section:not(.hero) {
 	}
 }
 
+#pay {
+	.flow {
+		--flow-space: 1rem;	
+	}
+	
+	:is(p, ul):not([class]) {
+		margin-inline: auto;
+		max-width: 65ch;
+	}
+}
+
+#values {
+	background-color: var(--background-4);
+	color: var(--text-3);
+
+	.wrapper {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: minmax(250px, 40%) 2fr;
+	}
+	
+	h2 {
+		color: var(--pink);
+		max-width: 20ch;
+		text-wrap: balance;
+	}
+}
+
 .decorative-image-container {
 	aspect-ratio: 21 / 9;
 	overflow: clip;
