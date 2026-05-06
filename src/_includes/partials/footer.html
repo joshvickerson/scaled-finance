@@ -1,15 +1,24 @@
 <footer class="site-footer">
-	<div class="wrapper">
-	<ul class="socials">
-		{%- for site, url in socials.sites -%}
-		<li>
-			<a href="{{ meta.url }}" aria-label="Follow Website on {{ meta.name }}">
-				{% set iconPath = "../../images/meta/" + site.name + ".svg" %}
-				{% include iconPath %}
-			</a>
-		</li>
-		{%- endfor -%}
-	</ul>
-		<p class="credits">&copy; 2026. <a href="https://softclay.software/">Web design by Soft Clay Software</a>.</p>
+	<div class="wrapper" data-layout="grid">
+		<img eleventy:pictureattr:class="site-footer__logo" src="/images/meta/logo_small.png" alt="Scaled Finance" loading="lazy" />
+		<div class="site-footer__newsletter">
+			{%- include "partials/newsletter-form.html" -%}
+		</div>
+		<ul class="site-footer__links">
+			{%- for l in footer.links -%}
+			<li>
+				<a href="{{ l.url }}">{{ l.text }}</a>
+			</li>
+			{%- endfor -%}
+		</ul>
+		<p class="credits">&copy; 2026 {{ meta.nameFormal }}.</p>
+		<p>
+			{{ meta.businessAddress.street }}<br/>
+			{{ meta.businessAddress.city }}, {{ meta.businessAddress.state }} {{ meta.businessAddress.zipCode }}
+		</p>
+		<p id="registration-statement">
+			Scaled Finance, LLC (“Scaled Finance”) is a registered investment advisor offering advisory services in the state of Washington and in other jurisdictions where exempted. Registration does not imply a certain level of skill or training.
+		</p>
 	</div>
+	<p class="credits | text-align-center wrapper"><a href="https://softclay.software/">Web design by Soft Clay Software</a>.</p>
 </footer>

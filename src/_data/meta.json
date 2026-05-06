@@ -1,8 +1,15 @@
 {
-	"name": "New Website",
-	"url": "https://www.website.com",
-	"authorName": "",
+	"name": "Scaled Finance",
+	"nameFormal": "Scaled Finance, LLC",
+	"url": "https://www.scaledfinance.com",
+	"authorName": "Kevin Estes",
 	"authorEmail": "",
-	"description": "This is a description of the website. Nice",
-	"lang": "en"
+	"description": "Scaled Finance is an hourly financial planning firm dedicated to helping tech professionals and their families live their best lives. The Registered Investment Advisor (RIA) is independent, fee only, and advice only. Check out the free resources!",
+	"lang": "en",
+	"businessAddress": {
+		"street": "12819 SE 38th St, #214",
+		"city": "Bellevue",
+		"state": "WA",
+		"zipCode": "98006"
+	}
 }
