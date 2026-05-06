@@ -11,7 +11,6 @@
 	.wrapper {
 		align-items: center;
 		display: flex;
-		flex-wrap: wrap;
 		flex-direction: column;
 		gap: 1rem;
 		justify-content: space-between;
@@ -19,10 +18,11 @@
 	}
 
 	&__brand {
+		--header-logo-max-width: 240px;
 		flex-shrink: 0;
 
 		> * {
-			max-width: 320px;
+			max-width: var(--header-logo-max-width);
 		}
 	}
 
@@ -42,6 +42,46 @@
 			// parent level link containers
 			> li {
 				position: relative;
+			}
+		}
+		// styles for submenus
+		.nav__sub-menu {
+			--submenu-padding: 0.5em;
+			
+			background-color: var(--background-1);
+			display: flex;
+			flex-direction: column;
+			gap: var(--submenu-padding);
+			padding: 0;
+			position: absolute;
+			right: calc(var(--submenu-padding) * -1);
+			text-align: right;
+			transform: translateY(min(-160px, -200%));
+			width: 24ch;
+			z-index: 999;
+			
+			a {
+				padding: var(--submenu-padding) calc(var(--submenu-padding) * 2);
+				width: 100%;
+				
+				&:hover {
+					background-color: var(--light-warm-gray);
+					color: var(--black);
+				}
+			}
+		}
+		
+		// styles for menu items with submenus, regardless of nesting depth
+		ul li:has(.nav__sub-menu) {
+			position: relative;
+			overflow: visible;
+			
+			&:hover, &:focus, &:focus-within {
+				.nav__sub-menu {
+					border: 1px solid var(--warm-gray);
+					box-shadow: 2px 2px 3px var(--warm-gray);
+					transform: translateY(0);	
+				}
 			}
 		}
 		

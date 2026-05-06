@@ -1,5 +1,5 @@
 {% set navPages = collections.all | eleventyNavigation %}
-
+{% set headerCTA = [ {"url": "/", "text": "Join Newsletter", "buttonClass": ""} ] %}
 <header class="site-header">
 	<a class="skip-link | button" href="#main-content">Skip to content</a>
 	<div class="wrapper">
@@ -30,5 +30,10 @@
 				{%- endfor -%}
 			</ul>
 		</nav>
+		{% if headerCTA[0] %}
+		<div class="header-cta-container">
+			<a class="button {{ headerCTA[0].buttonClass }}" href="{{ headerCTA[0].url }}">{{ headerCTA[0].text }}</a>
+		</div>
+		{% endif %}
 	</div>
 </header>

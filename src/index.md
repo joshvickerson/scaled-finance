@@ -2,8 +2,6 @@
 title: "New Website"
 description: "Excellent new website"
 layout: "layouts/home.html"
-eleventyNavigation:
-  key: Home
 
 pageStylesheets: ['home']
 
