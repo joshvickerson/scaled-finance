@@ -45,3 +45,21 @@ section:not(.hero) {
 		}
 	}
 }
+
+.decorative-image-container {
+	aspect-ratio: 21 / 9;
+	overflow: clip;
+	position: relative;
+	
+	picture {
+		height: 100%;
+		position: relative;
+		top: -25%;
+	}
+	
+	.shade {
+		background-color: rgba(0,0,0,0.125);
+		position: absolute;
+		inset: 0;
+	}
+}

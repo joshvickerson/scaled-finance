@@ -98,4 +98,66 @@
 		</div>
 	</div>
 </section>
+<section id="values" class="">
+	<div class="wrapper">
+		<h2>What do these mean for you?</h2>
+		{% if valuesAccordion %}
+		<div id="values-accordion" class="accordion-container">
+			{% for v in valuesAccordion %}
+			<details class="faq-item flow" name="{{ section.title | slugify }}">
+				<summary>{{ v.label }}</summary>
+				{{ v.body | safe }}
+			</details>
+			{% endfor %}
+		</div>
+		{% endif %}
+	</div>
+</section>
+<section class="logo-strip-container">
+	<div class="wrapper">
+		<p>Part of a well-connected network:</p>
+		<div class="logo-strip">
+			<a href="https://www.letsmakeaplan.org/find-a-cfp-professional/certified-professional-profile/caf67f5a-6b28-4420-a6de-ad2ece5655e2">
+				<img src="/images/third_party_logos/cfp-signature-vert-gold.webp" alt="Certified Financial Planner" />
+			</a>
+			<div class="logo-strip-item">
+				<img src="/images/third_party_logos/CCFC.webp" alt="Certified College Financial Consultant" />
+			</div>
+			<a href="https://www.napfa.org/member/107334/38942">
+				<img src="/images/third_party_logos/napfa.webp" alt="NAPFA Member" />
+			</a>
+			<a href="https://connect.xyplanningnetwork.com/find-an-advisor/kevin-estes-58443">
+				<img src="/images/third_party_logos/xy-planning.webp" alt="XY Planning Network" />
+			</a>
+			<a href="https://westernwashingtonfinancialadvisorsnetwork.com/team-member/kevin-estes/">
+				<img src="/images/third_party_logos/wwfan.webp" alt="Western Washington Financial Advisors Network" />
+			</a>
+			<a href="https://www.feeonlynetwork.com/financial-advisor/kevin-estes/">
+				<img src="/images/third_party_logos/fee-only.webp" alt="Fee-Only Network Member" />
+			</a>
+			<a href="https://wealthtender.com/financial-advisors/kevin-estes/">
+				<img src="/images/third_party_logos/wealthtender.webp" alt="Featured on WealthTender" />
+			</a>
+			<a href="https://adviceonlynetwork.com/advisors/kevin-estes">
+				<img src="/images/third_party_logos/advice-only-network.webp" alt="Advice-Only Network" />
+			</a>
+			<div class="logo-strip-item">
+				<img src="/images/third_party_logos/soa.webp" alt="The Society of Advice" />
+			</div>
+			<a href="https://www.measuretwiceplanners.com/">
+				<img src="/images/third_party_logos/measure-twice-planners.webp" alt="Measure Twice Planners" />
+			</a>
+			<a href="https://earlyretirementadvisors.org/">
+				<img src="/images/third_party_logos/early-retirement-advisors.webp" alt="Early Retirement Advisors" />
+			</a>
+			<a href="https://samslist.co/advisor/scaled-finance-llc">
+				<img src="/images/third_party_logos/samslist.webp" alt="Sam's List" />
+			</a>
+		</div>
+	</div>
+</section>
+<div class="decorative-image-container">
+	<img src="/images/decorative/home_interior.jpeg" alt="" loading="lazy" />
+	<div class="shade"></div>
+</div>
 {% endblock %}

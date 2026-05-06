@@ -1,0 +1,19 @@
+.text-block-with-image {
+	// main section layout wrapper
+	> .wrapper {
+		--section-gap: 1rem;
+		
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		gap: var(--section-gap);
+	}
+	
+	.text-content {
+		flex-basis: calc(60% - var(--section-gap));
+	}
+	
+	.image-container {
+		flex-basis: calc(40% - var(--section-gap));
+	}
+}

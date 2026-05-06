@@ -2,15 +2,20 @@
 @use "vars";
 
 .button {
+	--button-padding-block: 1lh;
+	--button-padding-inline: 2ch;
+	
 	align-items: center;
 	background-color: var(--pink);
-	border-radius: 8px;
+	border-radius: 12px;
 	border: 0;
 	color: var(--white);
 	display: flex;
+	font-size: var(--size-scale-400);
 	justify-content: center;
 	line-height: 1;
-	padding: 1rem 1.5rem;
+	padding-block: var(--button-padding-block);
+	padding-inline: var(--button-padding-inline);
 	position: relative;
 	text-decoration: none;
 	text-shadow: none; // don't inherit text shadow from parents
@@ -31,6 +36,12 @@
 	}
 }
 
+.button--small {
+	font-size: var(--size-scale-small);
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
 ul.button-group,
 .button-group {
 	display: flex;
@@ -38,11 +49,4 @@ ul.button-group,
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: var(--flow-space, 0);
-}
-
-
-@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
-	.button {
-		font-size: var(--size-scale-500);
-	}
 }

@@ -13,6 +13,9 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 // Helper functions from global
 import helpers from './src/_data/helpers.js';
 
+// Shortcodes
+import textBlockWithImage from './src/shortcodes/textBlockWithImage.js';
+
 // Create a helpful production flag
 const inProduction = process.env.NODE_ENV === 'production';
 
@@ -43,6 +46,9 @@ export default (config) => {
 	
 	// Filters
 	config.addFilter("dateISOString", dateISOString);
+	
+	// Shortcodes
+	config.addPairedShortcode('textBlockWithImage', textBlockWithImage);
 	
 	// copy files
 	config.addPassthroughCopy('./src/robots.txt');
