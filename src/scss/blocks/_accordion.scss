@@ -20,13 +20,11 @@
 		opacity: 0;
 		block-size: 0;
 		overflow-y: clip;
-		padding-inline: var(--accordion-item-padding-block);
 		transition: content-visibility 0.375s allow-discrete, opacity 0.375s, block-size 0.375s, padding 0.375s;
 	}
 	
 	&[open]::details-content {
 		block-size: auto;
-		font-size: var(--size-scale-500);
 		opacity: 1;
 		padding-block: 0 1rem;
 	}
@@ -47,5 +45,10 @@
 			accent-color: var(--pink__light);
 			outline-color: var(--pink__light);
 		}
+	}
+	
+	p {
+		font-size: var(--size-scale-500);
+		padding-inline: calc(var(--accordion-item-padding-block) + 1ch);
 	}
 }

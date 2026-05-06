@@ -4,7 +4,7 @@
 		<div class="site-footer__newsletter">
 			{%- include "partials/newsletter-form.html" -%}
 		</div>
-		<ul class="site-footer__links">
+		<ul class="site-footer__links | flex flex-column">
 			{%- for l in footer.links -%}
 			<li>
 				<a href="{{ l.url }}">{{ l.text }}</a>

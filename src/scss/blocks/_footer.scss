@@ -2,18 +2,27 @@
 @use "vars";
 
 .site-footer {
-	padding: calc(var(--flow-space, 2rem) * 2) 0;
+	padding-block: var(--flow-space, 2rem) calc(var(--flow-space, 2rem) * 2);
 	
 	// plan for multiple layout options, but by default be a single flex column
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		
+		> p, > ul {
+			font-size: var(--size-scale-tiny);
+		}
 	}
 	
 	&__logo {
-		margin-inline: auto;
+		margin-block-end: 1rem;
 		max-width: 240px;
+	}
+	
+	&__links {
+		align-items: start;
+		gap: 0.75lh;
 	}
 
 	.socials {
@@ -82,7 +91,7 @@
 			
 			.site-footer__newsletter {
 				grid-column: 2;
-				grid-row: 1 / 5;
+				grid-row: 2 / 6;
 			}
 		}
 	}

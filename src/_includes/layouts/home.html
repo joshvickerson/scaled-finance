@@ -104,9 +104,9 @@
 		{% if valuesAccordion %}
 		<div id="values-accordion" class="accordion">
 			{% for v in valuesAccordion %}
-			<details class="accordion-item flow" name="values">
+			<details class="accordion-item" name="values">
 				<summary>{{ v.label }}</summary>
-				{{ v.body | safe }}
+				<p>{{ v.body }}</p>
 			</details>
 			{% endfor %}
 		</div>
