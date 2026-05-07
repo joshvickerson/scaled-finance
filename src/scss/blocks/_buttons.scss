@@ -42,6 +42,13 @@
 	text-transform: uppercase;
 }
 
+.button--large {
+	--button-padding-block: .75lh;
+	--button-padding-inline: 4ch;
+	font-size: var(--h3-size);
+	font-weight: 500;
+}
+
 ul.button-group,
 .button-group {
 	display: flex;

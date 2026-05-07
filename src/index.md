@@ -26,7 +26,7 @@ valuesAccordion:
 
 ---
 
-{% textBlockWithImage "/images/decorative/thrived_through_layoff.png", "Person standing in a celebratory pose, captioned: 'Thrived Through a Layoff'" %}
+{% textBlockWithImage "layoff-case-study", "/images/decorative/thrived_through_layoff.png", "Person standing in a celebratory pose, captioned: 'Thrived Through a Layoff'" %}
 
 ## Read the Case Study
 

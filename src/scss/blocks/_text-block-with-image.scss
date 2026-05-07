@@ -1,15 +1,14 @@
 .text-block-with-image {
-	// main section layout wrapper
-	> .wrapper {
-		--section-gap: 1rem;
-		
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		gap: var(--section-gap);
-	}
+	--section-gap: 2rem;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: var(--section-gap);
+	justify-content: space-between;
 	
 	.text-content {
+		--flow-space: 1.5rem;
 		flex-basis: calc(60% - var(--section-gap));
 	}
 	
