@@ -1,5 +1,7 @@
 {% extends "layouts/base.html" %}
 
+{% from "macros/accordion.njk" import renderAccordion  %}
+
 {% block content %}
 <section class="hero">
 	<div class="hero__content wrapper">
@@ -101,16 +103,9 @@
 <section id="values" class="">
 	<div class="wrapper">
 		<h2>What do these mean for you?</h2>
-		{% if valuesAccordion %}
-		<div id="values-accordion" class="accordion">
-			{% for v in valuesAccordion %}
-			<details class="accordion-item" name="values">
-				<summary>{{ v.label }}</summary>
-				<p>{{ v.body }}</p>
-			</details>
-			{% endfor %}
-		</div>
-		{% endif %}
+		{%- if valuesAccordion -%}
+		{{ renderAccordion(valuesAccordion) }}
+		{%- endif -%}
 	</div>
 </section>
 <section class="logo-strip-container">

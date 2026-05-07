@@ -1,11 +1,20 @@
+@use "sass:map";
+@use "vars";
+
 /**
  * WRAPPER
  * Sets a max width, adds a consistent gutter and horizontally
  * centers the contents
  */
 .wrapper {
-	max-width: 90rem;
+	max-width: 80rem;
 	padding-inline: 1.25rem;
 	margin-inline: auto;
 	position: relative;
+}
+
+@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
+	.wrapper {
+		padding-inline: 2rem;
+	}
 }

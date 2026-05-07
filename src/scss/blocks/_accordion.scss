@@ -2,6 +2,7 @@
 	--accordion-item-padding-block: 1rem;
 	
 	margin-block-start: calc(var(--accordion-item-padding-block) * -1);
+	width: 100%;
 }
 
 .accordion-item {

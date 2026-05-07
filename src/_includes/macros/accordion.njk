@@ -1,0 +1,10 @@
+{%- macro renderAccordion(accordion, id = '') -%}
+<div id="{{ id }}" class="accordion">
+	{% for item in accordion %}
+	<details class="accordion-item" name="values">
+		<summary>{{ item.label }}</summary>
+		<p>{{ item.body | safe }}</p>
+	</details>
+	{% endfor %}
+</div>
+{%- endmacro -%}

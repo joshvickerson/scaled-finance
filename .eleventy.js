@@ -14,7 +14,8 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import helpers from './src/_data/helpers.js';
 
 // Shortcodes
-import gridList from './src/shortcodes/gridList.js';
+import flexColumn from './src/shortcodes/flexColumn.js';
+import grid from './src/shortcodes/grid.js';
 import gridListItem from './src/shortcodes/gridListItem.js';
 import textBlockWithImage from './src/shortcodes/textBlockWithImage.js';
 
@@ -50,7 +51,8 @@ export default (config) => {
 	config.addFilter("dateISOString", dateISOString);
 	
 	// Shortcodes
-	config.addPairedShortcode('gridList', gridList);
+	config.addPairedShortcode('flexColumn', flexColumn);
+	config.addPairedShortcode('grid', grid);
 	config.addPairedShortcode('gridListItem', gridListItem);
 	config.addPairedShortcode('textBlockWithImage', textBlockWithImage);
 	

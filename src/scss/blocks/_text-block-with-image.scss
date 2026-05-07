@@ -1,6 +1,7 @@
-.text-block-with-image {
+.text-block-with-image > .wrapper {
 	--section-gap: 2rem;
 	
+	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;

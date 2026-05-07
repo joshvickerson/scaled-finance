@@ -1,8 +1,14 @@
+.page-wrapper section {
+	padding-block: 3rem;
+}
+
 #values {
-	--grid-col-gap: 2rem;
-	--grid-row-gap: 2rem;
-	
 	background-color: var(--background-2);
 	color: var(--white);
-	padding-block: 3rem;
+	
+	&.grid-list {
+		--grid-min-col-size: 285px;
+		--grid-col-gap: 2rem;
+		--grid-row-gap: 2rem;
+	}
 }

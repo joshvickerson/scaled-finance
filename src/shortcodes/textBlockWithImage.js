@@ -5,9 +5,10 @@ export default (
 	imageAlt = "A description",
 	imageOptions = { location: 'left' }
 ) => {
-	let template = `<section id="${ id }" class="text-block-with-image" data-image-location="${ imageOptions.location }">
-		<div class="text-content flow">${ content }</div>
-		<div class="image-container"><img src="${ imageSource }" alt="${ imageAlt }" /></div>
+	let template = `<section id="${ id }" class="text-block-with-image" data-image-location="${ imageOptions.location }"><div class="wrapper">
+			<div class="text-content flow">${ content }</div>
+			<div class="image-container"><img src="${ imageSource }" alt="${ imageAlt }" /></div>
+		</div>
 	</section>`;
 
 	return template;
