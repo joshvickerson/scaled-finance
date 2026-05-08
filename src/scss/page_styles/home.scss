@@ -72,22 +72,8 @@ section:not(.hero) {
 		max-width: 20ch;
 		text-wrap: balance;
 	}
-}
-
-.decorative-image-container {
-	aspect-ratio: 21 / 9;
-	overflow: clip;
-	position: relative;
 	
-	picture {
-		height: 100%;
-		position: relative;
-		top: -25%;
-	}
-	
-	.shade {
-		background-color: rgba(0,0,0,0.125);
-		position: absolute;
-		inset: 0;
+	.accordion {
+		margin-block-start: calc(var(--accordion-item-padding-block) * -1);
 	}
 }

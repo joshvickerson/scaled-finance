@@ -2,7 +2,10 @@ export default (
 	content,
 	params
 ) => {
-	return `<section id="${ params.id }" class="grid ${params.classes}">
+	// unpack params with defaults
+	let id = params?.id || '';
+	let classes = params?.classes || '';
+	return `<section id="${ id }" class="grid ${classes}">
 		<div class="wrapper">${ content }</div>
 	</section>`;
 }

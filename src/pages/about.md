@@ -94,24 +94,24 @@ Coworkers kept asking me financial questions. I couldn’t find any financial pl
   {% endgridListItem %}
 {% endgrid %}
 {% grid id = "specialties" %}
-  {% flexColumn %}
-  
-  ## Who, What How
-  
-  I help tech professionals and their families live great lives. My definition of family is broad! Your family is whoever matters most to you.
-  
-  I’ve been blessed with incredible opportunities. Now, I have the privilege to help people doing what I love.
-  
-  I’m located near T-Mobile’s Bellevue, WA headquarters. Scaled Finance operates virtually, allowing me to serve clients nationwide.
-  
-  {% endflexColumn %}
-  {% flexColumn %}
-  
-  ## Specialties
-  
-  {{ renderAccordion(specialtiesAccordion) }}
-  
-  {% endflexColumn %}
+{% flexColumn classes="flow" %}
+
+## Who, What How
+
+I help tech professionals and their families live great lives. My definition of family is broad! Your family is whoever matters most to you.
+
+I’ve been blessed with incredible opportunities. Now, I have the privilege to help people doing what I love.
+
+I’m located near T-Mobile’s Bellevue, WA headquarters. Scaled Finance operates virtually, allowing me to serve clients nationwide.
+
+{% endflexColumn %}
+{% flexColumn classes="flow" %}
+
+## Specialties
+
+{{ renderAccordion(specialtiesAccordion) }}
+
+{% endflexColumn %}
 {% endgrid %}
 
 {% grid id = "fun-facts" %}
@@ -120,19 +120,18 @@ Coworkers kept asking me financial questions. I couldn’t find any financial pl
 ![Kevin Estes dressed like a pirate in a red coat, fake sword, crocheted tentacle green mask, tri-point hat, and holding a voter's ballot in front of a mailbox and orange-colored trees.](/images/kevin-go-vote.webp)
 
 {% endflexColumn %}
-{% flexColumn %}
+{% flexColumn classes="flow" %}
 
+## Fun Facts
 
-  ## Fun Facts
-  
-  * Co-founded a half marathon
-  * Love to play Ultimate Frisbee
-  * Dress up for Halloween
-  * Often have a song in my head
-  * Grew up with a computer and without a TV
-  * Worked at a women’s apparel retailer for four years
-  * Helped build houses in middle and high school
-  * Taught GMAT prep courses
+* Co-founded a half marathon
+* Love to play Ultimate Frisbee
+* Dress up for Halloween
+* Often have a song in my head
+* Grew up with a computer and without a TV
+* Worked at a women’s apparel retailer for four years
+* Helped build houses in middle and high school
+* Taught GMAT prep courses
 
 {% endflexColumn %}
 {% endgrid %}
@@ -172,7 +171,6 @@ Coworkers kept asking me financial questions. I couldn’t find any financial pl
 
 {% endflexColumn %}
 {% flexColumn %}
-
 
 Kevin Estes is certified for financial planning services in the United States by Certified Financial Planner Board of Standards, Inc. (“CFP Board”). Therefore, he may refer to himself as a CERTIFIED FINANCIAL PLANNER™ professional or a CFP® professional and use these and CFP Board’s other certification marks (the “CFP Board Certification Marks”).
 

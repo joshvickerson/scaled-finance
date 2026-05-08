@@ -1,7 +1,5 @@
 .accordion {
 	--accordion-item-padding-block: 1rem;
-	
-	margin-block-start: calc(var(--accordion-item-padding-block) * -1);
 	width: 100%;
 }
 
@@ -18,8 +16,8 @@
 	}
 	
 	&::details-content {
-		opacity: 0;
 		block-size: 0;
+		opacity: 0;
 		overflow-y: clip;
 		transition: content-visibility 0.375s allow-discrete, opacity 0.375s, block-size 0.375s, padding 0.375s;
 	}
@@ -49,7 +47,7 @@
 	}
 	
 	p {
-		font-size: var(--size-scale-500);
+		font-size: inherit;
 		padding-inline: calc(var(--accordion-item-padding-block) + 1ch);
 	}
 }

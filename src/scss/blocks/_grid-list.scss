@@ -3,6 +3,8 @@
 	--grid-min-col-size: 280px;
 	--grid-col-gap: 1rem;
 	--grid-row-gap: 1rem;
+	
+	display: grid;
 		
 	> .wrapper {
 		display: grid;

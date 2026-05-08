@@ -2,5 +2,7 @@ export default (
 	content,
 	params
 ) => {
-	return `<div class="flex-column">${ content }</div>`;
+	// unpack params with defaults
+	let classes = params?.classes || '';
+	return `<div class="flex-column ${classes}">${ content }</div>`;
 }
