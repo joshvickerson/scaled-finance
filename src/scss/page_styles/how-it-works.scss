@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "../vars";
+
+#topics {
+	background-color: var(--background-2);
+	color: var(--white);
+	padding-block: calc(var(--flow-space, 2rem) * 2);
+	
+	
+	.grid {
+		--grid-min-col-size: 130px;
+		
+		p {
+			font-size: var(--size-scale-small);
+		}
+	}
+}
+
+#network-link-pile {
+	p {
+		display: none;
+	}
+}
+
+@media screen and (min-width: map.get(vars.$breakpoints, "lg")) {
+	#topics {
+		.grid > .wrapper {
+			grid-template-columns: repeat(6, 1fr);
+		}	
+	}	
+}

@@ -1,0 +1,37 @@
+.simple-page-layout {
+	--page-layout-padding: 3rem;
+	
+	> .wrapper {
+		--flow-space: 3rem;
+	}
+}
+
+.text-block-with-image {
+	> .wrapper {
+		--section-gap: 3rem;
+	}
+}
+
+#tailored-service {
+	.text-content {
+		order: 2;
+	}
+	.image-container {
+		order: 1;
+	}
+}
+
+#engagements {
+	background-color: var(--background-5);
+	color: var(--white);
+	padding-block: 3rem;
+	
+	.grid {
+		--grid-min-col-size: 300px;
+	}
+	
+	h2 {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
+}

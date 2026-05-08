@@ -56,6 +56,13 @@
 	}
 }
 
+.button--outline {
+	background-color: var(--white);
+	border: 1px solid var(--button-bg-color);
+	border-radius: 0;
+	color: var(--button-bg-color);
+}
+
 .button--small {
 	font-size: var(--size-scale-small);
 	font-weight: 300;

@@ -46,3 +46,44 @@ The total cost depends on the:
 {{ ctaButton("/newsletter-sign-up/", "Join Newsletter") }}
 
 {% endtextBlockWithImage %}
+
+<section id="engagements" class="full-width">
+{% grid id = "engagements-sizes" %}
+  
+  ## Sample Engagements
+  
+  {% gridListItem %}
+
+  ![Small](/images/illustrations/shell-1.webp)
+  
+  ### Small
+  
+  * $4,000
+  * 3-4 sessions
+  * A few topics
+  
+  {% endgridListItem %}
+  {% gridListItem %}
+  
+  ![Medium](/images/illustrations/shell-2.webp)
+  
+  ### Medium
+  
+  * $6,000
+  * 5-6 sessions
+  * Several topics
+  
+  {% endgridListItem %}
+  {% gridListItem %}
+  
+  ![Large](/images/illustrations/shell-3.webp)
+  
+  ### Large
+  
+  * $8,000
+  * > 6 sessions
+  * Many topics
+  
+  {% endgridListItem %}
+{% endgrid %}
+</section>

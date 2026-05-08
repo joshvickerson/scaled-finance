@@ -56,16 +56,24 @@
 			right: calc(var(--submenu-padding) * -1);
 			text-align: right;
 			transform: translateY(min(-160px, -200%));
-			width: 24ch;
+			width: 20ch;
 			z-index: 999;
 			
 			a {
 				padding: var(--submenu-padding) calc(var(--submenu-padding) * 2);
+				text-align: right;
 				width: 100%;
 				
 				&:hover {
 					background-color: var(  --warm-gray__light);
 					color: var(--black);
+				}
+				
+				&[aria-current="page"]::after {
+					bottom: 6px;
+					left: calc(var(--submenu-padding) * 2);
+					right: calc(var(--submenu-padding) * 2);
+					width: auto;
 				}
 			}
 		}

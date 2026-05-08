@@ -1,0 +1,47 @@
+.grid {
+	--grid-min-col-size: 280px;
+	--grid-col-gap: 1rem;
+	--grid-row-gap: 1rem;
+	
+	display: grid;
+	
+	// if there's a wrapper inside, the parent needs to be block
+	// otherwise child grid won't wrap to parent width
+	&:has(> .wrapper) {
+		display: block;
+		width: 100%;
+	}
+		
+	> .wrapper {
+		display: grid;
+		grid-column-gap: var(--grid-col-gap);
+		grid-row-gap: var(--grid-row-gap);
+		grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-col-size), 1fr));
+	}
+}
+
+.grid-list__item {
+	align-items: center;
+	display: flex;
+	font-size: var(--size-scale-400);
+	flex-direction: column;
+	gap: 1rem;
+	padding-inline: 2ch;
+	text-align: center;
+	
+	picture, img {
+		padding: 8px;
+	}
+	
+	h2 {
+		font-size: var(--h3-size);
+		font-weight: 400;
+	}
+	
+	ul {
+		--flow-space: var(--size-scale-small);
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+}
