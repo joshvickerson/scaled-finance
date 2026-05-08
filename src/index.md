@@ -2,8 +2,9 @@
 title: "New Website"
 description: "Excellent new website"
 layout: "layouts/home.html"
-
+footerDecoration: "/images/decorative/home_interior.jpeg"
 pageStylesheets: ['home']
+includeNetworkLinks: true
 
 hero:
   headline: ""

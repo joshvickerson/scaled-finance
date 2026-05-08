@@ -1,4 +1,6 @@
 {
 	"layout": "layouts/simple-page.html",
-	"permalink": "/{{ page.filePathStem.replace('/pages', '') }}/"
+	"permalink": "/{{ page.filePathStem.replace('/pages', '') }}/",
+	"includeNetworkLinks": true,
+	"footerDecoration": ""
 }

@@ -3,6 +3,7 @@ export default (
 	params
 ) => {
 	// unpack params with defaults
+	let id = params?.id || '';
 	let classes = params?.classes || '';
-	return `<div class="flex-column ${classes}">${ content }</div>`;
+	return `<div id="${id}" class="flex-column ${classes}">${ content }</div>`;
 }

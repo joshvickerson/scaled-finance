@@ -2,16 +2,21 @@
 @use "vars";
 
 .button {
+	--button-bg-color: var(--pink);
+	--button-hover-bg-color: var(--pink__dark);
+	--button-hover-text-color: var(--white);
+	--button-text-color: var(--white);
 	--button-padding-block: 1lh;
 	--button-padding-inline: 2ch;
 	
 	align-items: center;
-	background-color: var(--pink);
+	background-color: var(--button-bg-color);
 	border-radius: 12px;
 	border: 0;
-	color: var(--white);
+	color: var(--button-text-color);
 	display: flex;
 	font-size: var(--size-scale-400);
+	gap: 1ch;
 	justify-content: center;
 	line-height: 1;
 	padding-block: var(--button-padding-block);
@@ -23,9 +28,9 @@
 	width: fit-content;
 
 	&:hover {
-		background-color: var(--pink__dark);
-		color: var(--white);
-		cursor: pointer;
+		background-color: var(--button-hover-bg-color);
+		color: var(--button-hover-text-color);
+		cursor: pointer !important;
 	}
 	
 	&:focus-visible {
@@ -33,6 +38,21 @@
 		color: var(--white);
 		outline: 2px solid var(--pink__dark);
 		outline-offset: 3px;
+	}
+	
+	img {
+		height: 1.5lh;
+		filter: drop-shadow(1px 1px 0px var(--black));
+		margin-block-start: -1px;
+	}
+}
+
+.button--light {
+	--button-bg-color: var(--warm-gray__light);
+	--button-text-color: var(--warm-gray__dark);
+	
+	&:hover {
+		--button-hover-bg-color: var(--warm-gray__dark);
 	}
 }
 

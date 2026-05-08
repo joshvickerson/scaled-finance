@@ -3,6 +3,7 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	gap: var(--flow-space, 1rem);
 }
 
 .full-width {
@@ -12,4 +13,8 @@
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
+}
+
+.justify-content-center {
+	justify-content: center;
 }

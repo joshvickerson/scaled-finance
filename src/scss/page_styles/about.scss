@@ -1,14 +1,28 @@
 .page-wrapper section {
 	padding-block: 3rem;
+	
+	picture, img {
+		max-height: 360px;
+	}
 }
 
 #values {
 	background-color: var(--background-2);
 	color: var(--white);
 	
-	&.grid-list {
-		--grid-min-col-size: 285px;
-		--grid-col-gap: 2rem;
+	&.grid {
+		--grid-col-gap: 3rem;
 		--grid-row-gap: 2rem;
 	}
 }
+
+#fun-facts {
+	background-color: var(--background-3);
+	color: var(--white);
+}
+
+#associations {
+	.grid-list__item {
+		font-size: var(--size-scale-small);
+	}
+} 

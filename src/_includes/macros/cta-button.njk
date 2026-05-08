@@ -1,3 +1,7 @@
 {%- macro ctaButton(url, text, buttonClass = 'button--large', trackEvent = '') -%}
+{% if '.pdf' in url %}
+<a href="{{ url }}" class="button button--large {{ buttonClass }}" download><img src="/images/icons/pdf-icon.webp" alt="PDF" />{{ text }}</a>
+{% else %}
 <a href="{{ url }}" class="button {{ buttonClass }}">{{ text }}</a>
+{% endif %}
 {%- endmacro -%}

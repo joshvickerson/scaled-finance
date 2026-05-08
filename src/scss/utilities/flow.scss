@@ -3,5 +3,29 @@
  * Applies a margin to sibling elements based on a --flow-space custom property.
  */
 .flow > * + * {
-	margin-top: var(--flow-space, 2rem);
+	margin-top: var(--flow-space, var(--size-scale-400));
+}
+
+.flow-xs {
+  --flow-space: var(--size-scale-tiny);
+}
+
+.flow-s {
+  --flow-space: var(--size-scale-small);
+}
+
+.flow-m {
+  --flow-space: var(--size-scale-600);
+}
+
+.flow-l {
+  --flow-space: var(--size-scale-800);
+}
+
+.flow-xl {
+  --flow-space: var(--size-scale-900);
+}
+
+.flow-xxl {
+  --flow-space: var(--size-scale-major);
 }

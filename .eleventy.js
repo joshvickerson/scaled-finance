@@ -57,6 +57,7 @@ export default (config) => {
 	config.addPairedShortcode('textBlockWithImage', textBlockWithImage);
 	
 	// copy files
+	config.addPassthroughCopy('./src/downloads/');
 	config.addPassthroughCopy('./src/robots.txt');
 	config.addPassthroughCopy('./src/images/');
 	config.addPassthroughCopy('./src/fonts/**');

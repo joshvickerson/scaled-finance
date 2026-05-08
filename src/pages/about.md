@@ -1,11 +1,11 @@
 ---
 title: "About Scaled Finance"
 description: "About Scaled Finance"
-
-eleventyNavigation:
-  key: "About"
 layout: "layouts/page.html"
 pageStylesheets: ["about"]
+includeNetworkLinks: false
+eleventyNavigation:
+  key: "About"
 
 specialtiesAccordion:
 - label: "Equity Compensation"
@@ -37,7 +37,7 @@ Coworkers kept asking me financial questions. I couldn’t find any financial pl
 {{ ctaButton("/how-it-works/", "How It Works") }}
 
 {% endtextBlockWithImage %}
-{% grid id = "values", classes = "grid-list" %}
+{% grid id = "values" %}
   {% gridListItem %}
 
   ![Clarity Creates Confidence](/images/illustrations/clarity-creates-confidence.webp)
@@ -94,7 +94,7 @@ Coworkers kept asking me financial questions. I couldn’t find any financial pl
   {% endgridListItem %}
 {% endgrid %}
 {% grid id = "specialties" %}
-{% flexColumn classes="flow" %}
+{% flexColumn %}
 
 ## Who, What How
 
@@ -105,7 +105,7 @@ I’ve been blessed with incredible opportunities. Now, I have the privilege to 
 I’m located near T-Mobile’s Bellevue, WA headquarters. Scaled Finance operates virtually, allowing me to serve clients nationwide.
 
 {% endflexColumn %}
-{% flexColumn classes="flow" %}
+{% flexColumn %}
 
 ## Specialties
 
@@ -115,12 +115,12 @@ I’m located near T-Mobile’s Bellevue, WA headquarters. Scaled Finance operat
 {% endgrid %}
 
 {% grid id = "fun-facts" %}
-{% flexColumn %}
+{% flexColumn classes = "justify-content-center" %}
 
 ![Kevin Estes dressed like a pirate in a red coat, fake sword, crocheted tentacle green mask, tri-point hat, and holding a voter's ballot in front of a mailbox and orange-colored trees.](/images/kevin-go-vote.webp)
 
 {% endflexColumn %}
-{% flexColumn classes="flow" %}
+{% flexColumn %}
 
 ## Fun Facts
 
