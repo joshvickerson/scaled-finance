@@ -124,5 +124,3 @@ eleventyNavigation:
 {% endflexColumn %}
 
 {{ statementBlock("Scaled Finance provides advice. You would implement and monitor the changes. Additional reviews would be covered in future engagements.") }}
-
-{% include "partials/network-link-pile.html" %}
