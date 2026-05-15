@@ -7,7 +7,7 @@
 		"attribute-allowed-values": 1,
 		"attribute-boolean-style": 0,
 		"attribute-empty-style": 1,
-		"no-dupe-id": 1, // TODO: re-enable rule during QA
+		"no-dupe-id": 1,
 		"no-trailing-whitespace": 0,
 		"no-raw-characters": 0,
 		"attribute-allowed-values": 1,
