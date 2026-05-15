@@ -25,7 +25,7 @@ The mix and amount depends on level or grade.
 
 {% endtextBlockWithImage %}
 
-{% textBlockWithImage "t-mobile-compensation", "/images/decorative/graphs_on_computer.jpeg", "A photo of someone sitting at the desk with their back to the camera. They're logged into what appears to be a personal financial dashboard. There are a phone and glasses on what appears to be a conference room table." %}
+{% textBlockWithImage "t-mobile-pay", "/images/decorative/graphs_on_computer.jpeg", "A photo of someone sitting at the desk with their back to the camera. They're logged into what appears to be a personal financial dashboard. There are a phone and glasses on what appears to be a conference room table." %}
 
 ## How much are T-Mobile employees paid?
 
@@ -39,7 +39,7 @@ Non-promotion compensation (merit) adjustments typically occur in February. They
 
 {% include "partials/t-mobile/position-insights-links.html" %}
 
-{% textBlockWithImage "t-mobile-compensation", "/images/decorative/graphs_on_computer.jpeg", "A photo of someone sitting at the desk with their back to the camera. They're logged into what appears to be a personal financial dashboard. There are a phone and glasses on what appears to be a conference room table." %}
+{% textBlockWithImage "t-mobile-pay-schedule", "/images/decorative/graphs_on_computer.jpeg", "A photo of someone sitting at the desk with their back to the camera. They're logged into what appears to be a personal financial dashboard. There are a phone and glasses on what appears to be a conference room table." %}
 
 ## Does T-Mobile pay weekly or biweekly?
 
