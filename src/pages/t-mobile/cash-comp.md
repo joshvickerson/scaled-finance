@@ -47,7 +47,7 @@ Biweekly. T-Mobile paychecks are every other week.
 
 There are 26 pay periods a year. Two months each year, employees receive three paychecks.
 
-Source:
+**Source:** <br/>
 [T-Mobile 2025 Benefits Guide](https://dokumfe7mps0i.cloudfront.net/oms/13892/document/2025/1/2U252_2025BenefitsGuide-AccessibleFINAL/2025BenefitsGuide-AccessibleFINAL.pdf)
 
 {% endtextBlockWithImage %}
