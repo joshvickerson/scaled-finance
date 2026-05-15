@@ -68,13 +68,6 @@
 					background-color: var(  --warm-gray__light);
 					color: var(--black);
 				}
-				
-				&[aria-current="page"]::after {
-					bottom: 6px;
-					left: calc(var(--submenu-padding) * 2);
-					right: calc(var(--submenu-padding) * 2);
-					width: auto;
-				}
 			}
 		}
 		
@@ -120,18 +113,11 @@
 			}
 			
 			&[aria-current="page"] {
-				&::after {
-					background-color: var(--pink);
-					bottom: 0;
-					content: ' ';
-					display: block;
-					height: 2px;
-					left: 0;
-					margin-inline: auto;
-					position: absolute;
-					right: 0;
-					width: 95%;
-				}
+				text-decoration-color: var(--pink);
+				text-decoration-line: underline;
+				text-decoration-style: solid;
+				text-decoration-thickness: 3px;
+				text-underline-offset: 4px;
 			}
 		}
 	}

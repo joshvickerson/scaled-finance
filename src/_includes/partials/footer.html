@@ -11,6 +11,8 @@
 	<div class="wrapper" data-layout="grid">
 		<img eleventy:pictureattr:class="site-footer__logo" src="/images/meta/logo_small.png" alt="Scaled Finance" loading="lazy" />
 		<div class="site-footer__newsletter">
+			<p>Join the newsletter with expert financial tips for tech professionals.</p>
+			{% set newsletterFormID = 'site-footer-newsletter-form' %}
 			{%- include "partials/newsletter-form.html" -%}
 		</div>
 		<ul class="site-footer__links | flex flex-column">

@@ -1,6 +1,5 @@
 <div class="newsletter-sign-up">
-	<p>Join the newsletter with expert financial tips for tech professionals.</p>
-	<form id="newsletter-form" name="newsletter" method="post" action="/contact/success/" netlify netlify-honeypot="terms">
+	<form id="{{ newsletterFormID or 'newsletter-form'}}" name="newsletter" method="post" action="/contact/success/" netlify netlify-honeypot="terms">
 		<div class="form-field">
 			<label for="email">Email Address</label>
 			<input type="email" name="email" id="email" />
