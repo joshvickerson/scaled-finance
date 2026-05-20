@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 		{% if page.url != '404.html' %}
 			<url>
 					<loc>{{ meta.url }}{{ page.url | url }}</loc>
-					<lastmod>{{ page.date | dateISOString }}</lastmod>
+					<lastmod>{{ page.date | w3DateFilter }}</lastmod>
 			</url>
 		{%- endif -%}
 	{% endfor %}

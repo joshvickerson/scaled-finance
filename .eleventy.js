@@ -1,7 +1,7 @@
 import path from "node:path";
 
 // Filters
-import dateISOString from './src/filters/date-iso-string.js';
+import { readableDate, w3DateFilter } from './src/filters/dateFilters.js';
 
 // Transforms
 import htmlMinTransform from './src/transforms/html-min-transform.js';
@@ -21,24 +21,34 @@ import textBlockWithImage from './src/shortcodes/textBlockWithImage.js';
 
 // Create a helpful production flag
 const inProduction = process.env.NODE_ENV === 'production';
+const imageOptimizationFormats = ["webp", "jpg"];
+const assetHash = helpers.random();
 
 export default (config) => {
-	config.setQuietMode(inProduction); // use quiet builds in production
+	/** =================================
+	 * Global Config Options
+	 ** ===============================*/
+	config.setQuietMode(inProduction);
 	config.addGlobalData('inProduction', inProduction);
-
-	const assetHash = helpers.random();
 	config.addGlobalData('assetHash', assetHash);
 
-	// Only minify HTML if we are in production because it slows builds _right_ down
+	// Only minify HTML in production
 	if (inProduction) {
 		config.addTransform('htmlmin', htmlMinTransform);
 	}
 	
-	// Plugins
+	/** =================================
+	 * Filters
+	 ** ===============================*/
+	config.addFilter('readableDate', readableDate);
+	config.addFilter('w3DateFilter', w3DateFilter);
+	
+	/** =================================
+	 * Plugins
+	 ** ===============================*/
 	config.addPlugin(eleventyNavigationPlugin);
-	// optimize images
 	config.addPlugin(eleventyImageTransformPlugin, {
-		formats: ["avif", "webp", "jpg"],
+		formats: imageOptimizationFormats,
 		filenameFormat: function (id, src, width, format, options) {
 			// Preserve file names for SEO purposes
 			const extension = path.extname(src);
@@ -46,22 +56,32 @@ export default (config) => {
 			return `${name}-${width}.${format}`;
 		}
 	});
-	
-	// Filters
-	config.addFilter("dateISOString", dateISOString);
-	
-	// Shortcodes
+
+	/** =================================
+	 * Shortcodes
+	 ** ===============================*/
 	config.addPairedShortcode('flexColumn', flexColumn);
 	config.addPairedShortcode('grid', grid);
 	config.addPairedShortcode('gridListItem', gridListItem);
 	config.addPairedShortcode('textBlockWithImage', textBlockWithImage);
 	
-	// copy files
+	/** =================================
+	 * Files to Copy
+	 ** ===============================*/
 	config.addPassthroughCopy('./src/downloads/');
 	config.addPassthroughCopy('./src/robots.txt');
 	config.addPassthroughCopy('./src/images/');
 	config.addPassthroughCopy('./src/fonts/**');
 	config.addPassthroughCopy('./src/js/');
+	
+	/** =================================
+	 * Content Collections
+	 ** ===============================*/
+	
+	// Returns a collection of blog posts in reverse date order
+	config.addCollection('blog', collection => {
+		return [...collection.getFilteredByGlob('./src/insights/**/*.html')].reverse();
+	});
 
 	return {
 		markdownTemplateEngine: 'njk',

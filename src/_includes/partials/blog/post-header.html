@@ -1,0 +1,30 @@
+{% set authorData = authors[0] %}
+
+<div class="post-header">
+	<div class="post-header-inner">
+		<div class="wrapper flow">
+			<div class="post-header-details">
+				<time class="post__published" datetime="{{ date | w3DateFilter }}">{{ date | readableDate | safe }}</time>
+				{% if updated is defined %}
+					{% if date != updated %}
+					<p class="post__updated">
+						<strong>Updated:</strong> <time datetime="{{ updated | w3DateFilter }}">{{ updated | w3DateFilter | safe }}</time>
+					</p>
+					{% endif %}
+				{% endif %}
+			</div>
+				<h1 class="post-header__heading">
+					{{ title }}
+				</h1>
+			<div class="post-header__author">
+				{% if authorData.photo and authorData.photoAlt %}
+				<img src="/images/authors/{{ authorData.photo }}" alt="{{ authorData.photoAlt }}" />
+				{% endif %}
+				<p>By: {{ authorData.name }}</p>
+				{%- if authorData.link.url and authorData.link.text -%}
+				<a class="post-header__author-link" href="{{authorData.link.url}}">{{ authorData.link.text }}</a>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</div>

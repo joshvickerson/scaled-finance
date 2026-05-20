@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %} 
+{% set postListItems = pagination.items %}
+
+{# If this is a tag, grab those items instead as one large collection #}
+{% if tag %}
+	{% set postListItems = collections[tag].reverse() %}
+	{% set metaTitle = 'Scaled Finance Insights filed under “' + tag + '”' %}
+{% endif %}
+
+{% block content %}
+<div class="blog-container">
+	<section class="feed-hero | corkboard">
+		<div class="wrapper" data-layout="grid">
+			{% if tag %}
+			<h1 class="archive-header">Insights Filed Under {{ tag }}</h1>
+			{% else %}
+				<div class="feed-hero__content flex flex-column">
+					<h1>{{ hero.header }}</h1>
+					{%- if hero.body -%}
+					<p class="hero__body">{{ hero.body }}</p>
+					{%- endif -%}
+					{%- if hero.ctas.length > 0 -%}
+					<div class="hero__ctas | button-group">
+						{%- for cta in hero.ctas -%}
+						<a href="{{ cta.url }}" class="button" data-variant="{{buttonVariant}}">{{ cta.text }}</a>
+						{%- endfor -%}
+					</div>
+					{%- endif -%}
+				</div>
+				{%- if hero.media -%}
+				<div class="hero__media">
+					{%- if hero.media.type == 'image' -%}
+						<figure class="instant-film-photo">
+							<img src="{{ hero.media.src }}" alt="{{ hero.media.alt }}" >
+							<figcaption>{{ hero.media.caption }}</figcaption>
+						</figure>
+					{%- endif -%}
+				</div>
+				{%- endif -%}
+		</div>
+		{% endif %}
+	</section>
+	{%- if not tag and content -%}
+	<section class="feed-index__content">
+		<div class="wrapper flex flex-column">
+			{{ content | safe }}
+		</div>
+	</section>
+	{%- endif -%}
+	
+	{% include "partials/blog/post-list.html" %}
+
+	{# If we leave pagination in for tags, the next and prev links will
+		link to tags and be rather confusing, so don't render in that situation #}
+	{% if not tag %}
+		{% include "partials/blog/pagination.html" %}
+	{% endif %}
+</div>
+{% endblock %}

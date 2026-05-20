@@ -1,0 +1,14 @@
+{% if tags %}
+<section class="post-footer">
+  <div class="wrapper">
+    <p id="tags-desc">This post has been filed under:</p>
+    <ul class="tags-list" aria-describedby="tags-desc">
+      {% for tag in tags %}
+        <li>
+          <a href="/blog/tag/{{ tag | slugify }}/">#{{ tag | replace(' ', '-') }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{% endif %}

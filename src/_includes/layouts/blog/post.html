@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block customMeta %}
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": "{{ title }}",
+		"datePublished": "{{ date | w3DateFilter }}",
+		{% if updated %}
+		"dateModified": "{{ updated | w3DateFilter }}",
+		{% endif %}
+		"author": {
+			"@type": "Person",
+			"name": "{{ author }}"
+		}
+	}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+	<article class="post">
+		{% include "partials/blog/post-header.html" %}
+		<section class="post-content | wrapper flow">
+			{{ content | safe }}
+		</section>
+		{% include "partials/blog/post-footer.html" %}
+	</article>
+	<div class="post-newsletter-section | wrapper text-align-center">
+	<p>Thanks for reading my post</p>
+	<p>Just a reminder, I share resources that can help you.</p>
+	{% include "partials/newsletter-form.html" %}
+	</div>
+	<div class="post-disclaimer | wrapper">
+		<p>
+			In addition to the <a href="https://www.scaledfinance.com/disclaimer" target="_blank">usual disclaimers</a>, neither this post nor these images include any financial, tax, or legal advice.
+		</p>
+		{# post cover photo should also display here? #}
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+<section class="feed-index__content" id="post-list">
+	<div class="wrapper">
+		<ol class="post-list">
+			{% for post in postListItems %}
+			<li class="post-list__item flex flex-column">
+				<h2><a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a></h2>
+				<div class="post-list__author">
+					<p>By {{ post.data.author }}</p>
+				</div>
+				{% if post.data.summary is defined %}
+				<p class="post-list__description">{{ post.data.summary }}</p>
+				{% endif %}
+				<time datetime="{{ post.data.date | w3DateFilter }}">{{ post.data.date | readableDate | safe }}</time>
+			</li>
+			{% endfor %}
+		</ol>
+	</div>
+</section>
