@@ -9,8 +9,9 @@ pagination:
   size: 10
 permalink: "/insights{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
 paginationAnchor: "#post-list"
-
 pageStylesheets: ["blog"]
+
+hero:
+  header: "Insights from Scaled Finance "
 ---
 
-# The Blog
