@@ -6,12 +6,11 @@ eleventyNavigation:
   key: "Insights"
 pagination:
   data: collections.blog
-  size: 10
+  size: 25
 permalink: "/insights{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
 paginationAnchor: "#post-list"
 pageStylesheets: ["blog"]
 
 hero:
-  header: "Insights from Scaled Finance "
+  header: "Insights from Scaled Finance"
 ---
-
