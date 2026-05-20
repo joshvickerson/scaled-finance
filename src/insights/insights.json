@@ -1,3 +1,5 @@
 {
-  "layout": "layouts/blog/post.html"
+  "layout": "layouts/blog/post.html",
+  "footerDecoration": "",
+  "pageStylesheets": ["blog"]
 }
