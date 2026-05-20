@@ -3,6 +3,10 @@
 	
 	max-width: 1024px;
 	
+	*:is(h1, h2, h3, h4) {
+		margin-block-start: calc(var(--flow-space) * 3);
+	}
+	
 	figure {
 		margin-block: calc(var(--flow-space) * 2);
 		margin-inline: auto;
