@@ -12,7 +12,7 @@
 		"no-raw-characters": 0,
 		"attribute-allowed-values": 1,
 		"long-title": 1,
-		"wcag/h30": 1
+		"wcag/h30": 1,
 		"svg-focusable": 0
 	}
 }
