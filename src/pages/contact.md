@@ -62,7 +62,7 @@ Bellevue, WA 98006
 </div>
 <div>
 
-{{ renderAccordion(faqAccordion) }}
+{{ renderAccordion(faqAccordion, 'faq-accordion') }}
 
 </div>
 {% endgrid %}

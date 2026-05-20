@@ -109,7 +109,7 @@ I’m located near T-Mobile’s Bellevue, WA headquarters. Scaled Finance operat
 
 ## Specialties
 
-{{ renderAccordion(specialtiesAccordion) }}
+{{ renderAccordion(specialtiesAccordion, 'specialties-accordion') }}
 
 {% endflexColumn %}
 {% endgrid %}
