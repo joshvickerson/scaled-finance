@@ -12,14 +12,14 @@
 	{%- endif -%}
 	<div class="hero__content">
 		{%- if hero.headline -%}
-		<h2 class="header-text">{{ hero.headline }}</h2>
+		<h1 class="hero__headline">{{ hero.headline }}</h1>
 		{%- endif -%}
 		{%- if hero.text -%}
 		<p>{{ hero.text | safe }}</p>
 		{%- endif -%}
 	</div>
-	<div class="hero__ctas">
-		<a class="button" href="{{hero.cta.url}}">{{hero.cta.text}}</a>
+	<div class="hero__ctas | button-group">
+		<a class="button button--large" href="{{hero.cta.url}}">{{hero.cta.text}}</a>
 	</div>
 	</div>
 </section>

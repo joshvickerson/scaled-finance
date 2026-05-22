@@ -77,15 +77,3 @@ section:not(.hero) {
 		margin-block-start: calc(var(--accordion-item-padding-block) * -1);
 	}
 }
-
-@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
-	.hero .wrapper {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-	}
-	
-	.hero__media {
-		grid-column: 1;
-		grid-row: 1 / 3;
-	}
-}

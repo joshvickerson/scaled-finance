@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../vars";
+
 .hero {
 	.layout {
 		--hero-gap: calc(var(--size-scale-400) * 2);
@@ -6,7 +9,7 @@
 		gap: var(--hero-gap);
 		justify-content: center;
 		min-height: 480px;
-		padding: calc(var(--flow-space, 2rem) * 2) 0;
+		padding-block: calc(var(--flow-space, 2rem) * 2);
 		text-align: center;	
 	}
 
@@ -16,5 +19,28 @@
 		flex-direction: column;
 		gap: var(--hero-gap);
 		justify-content: center;
+		
+		p {
+			font-size: var(--h2-size);
+			font-weight: 400;
+			padding-inline: 2ch;
+		}
+	}
+	
+	&__ctas {
+		align-items: end;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: map.get(vars.$breakpoints, "md")) {
+	.hero .layout {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	
+	.hero__media {
+		grid-column: 1;
+		grid-row: 1 / 3;
 	}
 }

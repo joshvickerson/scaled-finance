@@ -10,3 +10,16 @@ h2 {
 section {
 	padding-block: 3rem;
 }
+
+#t-mobile-benefits-links {
+	--grid-col-gap: 1.5rem;
+	--grid-row-gap: 1.5rem;
+	--grid-min-col-size: 254px;
+	
+	.wrapper {
+		margin-block-start: var(--flow-space);
+	}
+	.button {
+		width: 100%;
+	}
+}
