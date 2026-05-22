@@ -5,6 +5,7 @@ footerDecoration: "/images/decorative/measuring-tape.webp"
 pageStylesheets: ["what-it-costs"]
 
 eleventyNavigation:
+  order: 3
   key: "What It Costs"
 ---
 {% from "macros/cta-button.njk" import ctaButton %}

@@ -3,6 +3,7 @@ title: "Scaled Finance Insights Blog"
 description: "A description, good"
 layout: "layouts/blog/feed.html"
 eleventyNavigation:
+  order: 5
   key: "Insights"
 pagination:
   data: collections.blog

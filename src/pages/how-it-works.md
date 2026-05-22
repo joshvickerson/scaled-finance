@@ -5,6 +5,7 @@ footerDecoration: "/images/decorative/paper_plane.webp"
 pageStylesheets: ["how-it-works"]
 
 eleventyNavigation:
+  order: 2
   key: "How It Works"
 ---
 {% from "macros/cta-button.njk" import ctaButton %}

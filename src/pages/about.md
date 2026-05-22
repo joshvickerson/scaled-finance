@@ -5,6 +5,7 @@ layout: "layouts/page.html"
 pageStylesheets: ["about"]
 includeNetworkLinks: false
 eleventyNavigation:
+  order: 1
   key: "About"
 
 specialtiesAccordion:

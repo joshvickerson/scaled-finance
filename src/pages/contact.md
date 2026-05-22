@@ -3,6 +3,7 @@ title: "Scaled Finance - Contact"
 description: "Scaled Finance - Contact"
 layout: "layouts/page.html"
 eleventyNavigation:
+  order: 6
   key: "Contact & FAQ"
 footerDecoration: "/images/decorative/valley_misty_sunset.webp"
 pageStylesheets: ["contact"]

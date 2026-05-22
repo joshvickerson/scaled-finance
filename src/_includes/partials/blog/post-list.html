@@ -2,18 +2,16 @@
 	<div class="wrapper">
 		<ol class="post-list">
 			{% for post in postListItems %}
-			<li class="post-list__item flex flex-column">
+			<li class="post-list__item">
 				{% if post.data.coverPhoto %}
 					<img src="{{post.data.coverPhoto.file}}" alt="{{post.data.coverPhoto.alt}}" />
 				{% endif %}
 				<h2><a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a></h2>
-				<div class="post-list__author">
-					<p>By {{ post.data.authors[0].name }}</p>
-				</div>
+				<p class="post-list__author">By {{ post.data.authors[0].name }}</p>
 				{% if post.data.summary is defined %}
 				<p class="post-list__description">{{ post.data.summary }}</p>
 				{% endif %}
-				<time datetime="{{ post.data.date | w3DateFilter }}">{{ post.data.date | readableDate | safe }}</time>
+				<time class="post-list__publish-date" datetime="{{ post.data.date | w3DateFilter }}">{{ post.data.date | readableDate | safe }}</time>
 			</li>
 			{% endfor %}
 		</ol>

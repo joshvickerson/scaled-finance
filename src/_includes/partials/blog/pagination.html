@@ -3,13 +3,14 @@ pagination.href.next or pagination.href.previous %}
 <div class="pagination">
   <div class="wrapper">
     <nav class="pagination__inner" aria-label="Pagination links">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="newer">
+        Newer Posts
+      </a>
+      {% endif %}
       {% if pagination.href.next %}
       <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="older">
         Older Posts
-      </a>
-      {% endif %} {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="newer">
-        Newer Posts
       </a>
       {% endif %}
     </nav>

@@ -101,6 +101,11 @@ body {
 	font-size: var(--base-text-size);
 	font-weight: normal;
 	overflow-x: hidden;
+	
+	// any element with an id is a potential scroll target
+	*[id] {
+		scroll-margin-block: 120px;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

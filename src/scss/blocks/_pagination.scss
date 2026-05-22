@@ -1,0 +1,12 @@
+.pagination {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-inline: auto;
+		
+		a[data-direction="older"] {
+			margin-inline-start: auto;
+		}
+	}
+}
