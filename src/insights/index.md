@@ -6,7 +6,7 @@ eleventyNavigation:
   key: "Insights"
 pagination:
   data: collections.blog
-  size: 25
+  size: 24
 permalink: "/insights{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
 paginationAnchor: "#post-list"
 pageStylesheets: ["blog"]

@@ -28,3 +28,11 @@
 		border: 1px solid var(--warm-gray__light);
 	}
 }
+
+.post-list__item {
+	padding-block-end: 1rem;
+	
+	> :not(picture) {
+		padding-inline: 1rem;
+	}
+}
