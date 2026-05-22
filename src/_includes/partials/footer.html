@@ -2,7 +2,7 @@
 {% include "partials/network-link-pile.html" %}
 {%- endif -%}
 {% if footerDecoration != '' %}
-<div class="decorative-image-container">
+<div class="decorative-image-container" {% if footerDecorationPosition %}data-position="{{footerDecorationPosition}}"{% endif %}>
 	<img src="{{ footerDecoration }}" alt="" loading="lazy" />
 	<div class="shade"></div>
 </div>

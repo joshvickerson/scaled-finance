@@ -9,8 +9,8 @@ includeNetworkLinks: true
 hero:
   headline: ""
   text: "I’m an hourly financial advisor who helps tech professionals and their families live great lives."
-  image: ""
-  imageAlt: ""
+  image: "kevin-estes-headshot.jpeg"
+  imageAlt: "Kevin Estes portrait. Smiling and wearing a dark gray suit and black shirt in front of a dark brown background."
   cta:
     text: "Learn More"
     url: "/about/"

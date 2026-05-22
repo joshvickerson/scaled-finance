@@ -27,6 +27,13 @@
 		position: absolute;
 		inset: 0;
 	}
+	
+	&[data-position="bottom"] {
+		picture img {
+			bottom: 0;
+			top: auto;
+		}
+	}
 }
 
 @media screen and (min-width: map.get(vars.$breakpoints, "md")) {

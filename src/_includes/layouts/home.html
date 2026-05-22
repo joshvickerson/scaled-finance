@@ -4,16 +4,20 @@
 
 {% block content %}
 <section class="hero">
-	<div class="hero__content wrapper">
+	<div class="layout wrapper">
 	{%- if hero.image -%}
-	<img src="/images/{{hero.image}}" alt="{{hero.imageAlt}}" />
+	<div class="hero__media">
+		<img src="/images/{{hero.image}}" alt="{{hero.imageAlt}}" />
+	</div>
 	{%- endif -%}
-	{%- if hero.headline -%}
-	<h2 class="header-text">{{ hero.headline }}</h2>
-	{%- endif -%}
-	{%- if hero.text -%}
-	<p>{{ hero.text | safe }}</p>
-	{%- endif -%}
+	<div class="hero__content">
+		{%- if hero.headline -%}
+		<h2 class="header-text">{{ hero.headline }}</h2>
+		{%- endif -%}
+		{%- if hero.text -%}
+		<p>{{ hero.text | safe }}</p>
+		{%- endif -%}
+	</div>
 	<div class="hero__ctas">
 		<a class="button" href="{{hero.cta.url}}">{{hero.cta.text}}</a>
 	</div>
