@@ -14,3 +14,17 @@
 		width: 100%;
 	}
 }
+
+.feed-index__content#post-list {
+	margin-block: 3rem 1rem;
+	
+	.post-list {
+		display: grid;
+		gap: 2rem 4rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	li {
+		border: 1px solid var(--warm-gray__light);
+	}
+}
