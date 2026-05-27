@@ -4,7 +4,7 @@
 			{% for post in postListItems %}
 			<li class="post-list__item">
 				{% if post.data.coverPhoto %}
-					<img src="{{post.data.coverPhoto.file}}" alt="{{post.data.coverPhoto.alt}}" />
+					<img src="{{post.data.coverPhoto.file}}" alt="{{post.data.coverPhoto.alt or post.data.title }}" />
 				{% endif %}
 				<h2><a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a></h2>
 				<p class="post-list__author">By {{ post.data.authors[0].name }}</p>
