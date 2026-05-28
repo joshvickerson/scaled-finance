@@ -1,8 +1,11 @@
 const getImageAlt = function() {
-	const images = document.querySelectorAll('.content-wrapper figure img');
+	const images = document.querySelectorAll('.content-wrapper img');
 	const results = [];
 	images.forEach((image) => {
-		results.push(`alt='${image.alt}' src='${image.src}'`);
+		results.push({
+			src: image.src,
+			alt: image.alt
+		});
 	});
 	
 	if(results.length > 0) {
