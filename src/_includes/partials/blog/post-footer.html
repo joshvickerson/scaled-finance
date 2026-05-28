@@ -5,7 +5,7 @@
     <ul class="tags-list" aria-describedby="tags-desc">
       {% for tag in tags %}
         <li>
-          <a href="/blog/tag/{{ tag | slugify }}/">#{{ tag | replace(' ', '-') }}</a>
+          <a href="/insights/category/{{ tag | slugify }}/">{{ tag | replace(' ', '-') }}</a>
         </li>
       {%- endfor -%}
     </ul>

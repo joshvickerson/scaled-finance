@@ -37,8 +37,12 @@
 		grid-template-columns: 1fr 1fr;
 	}
 	
-	li {
+	.post-list__item {
 		border: 1px solid var(--warm-gray__light);
+	}
+	
+	.post-list__tags {
+		list-style: none;
 	}
 }
 
