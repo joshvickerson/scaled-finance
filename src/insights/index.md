@@ -11,7 +11,7 @@ pagination:
 permalink: "/insights{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
 paginationAnchor: "#post-list"
 pageStylesheets: ["blog"]
-
+footerDecoration: "/images/decorative/girl_coast_binoculars.jpeg"
 hero:
   header: "Insights from Scaled Finance"
 ---
